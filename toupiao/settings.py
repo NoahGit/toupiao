@@ -33,12 +33,12 @@ ALLOWED_HOSTS = ['*']
 # 请执行以下命令：py manage.py migrate这个 migrate 命令检查 INSTALLED_APPS 设置，
 # 为其中的每个应用创建需要的数据表，至于具体会创建什么，这取决于你的 toupiao/settings.py 设置文件和每个应用的数据库迁移文件
 INSTALLED_APPS = [
-    'polls.apps.PollsConfig', # 投票系统
+    'polls.apps.PollsConfig',  # 投票系统
     'django.contrib.admin',  # 管理员站点， 你很快就会使用它
-    'django.contrib.auth',    #认证授权系统
-    'django.contrib.contenttypes',  #内容类型框架
-    'django.contrib.sessions',   #会话框架
-    'django.contrib.messages',   #消息框架
+    'django.contrib.auth',    # 认证授权系统
+    'django.contrib.contenttypes',  # 内容类型框架
+    'django.contrib.sessions',   # 会话框架
+    'django.contrib.messages',   # 消息框架
     'django.contrib.staticfiles',   # 管理静态文件的框架
 ]
 

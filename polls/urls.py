@@ -7,6 +7,8 @@ urlpatterns = [
     path('<int:pk>/', views.DetailView.as_view(), name='detail'),
     path('<int:pk>/results/', views.ResultsView.as_view(), name='results'),
     path('<int:question_id>/vote/', views.vote, name='vote'),
+    path('ulogin/', views.ulogin, name='ulogin'),        # 血的教训---'ulogin/'前面绝对不能有/,绝对不能写成'/ulogin/'
+    path('user_login/', views.user_login, name='user_login')
 
 
     # ex: /pools/
