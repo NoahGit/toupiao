@@ -5,6 +5,7 @@
     <title>detail</title>
 </head>
 <body>
+<div align="center">
     <h1>{{ question.question_text }}</h1>
 
     {% if error_message %}
@@ -19,7 +20,7 @@
         {% endfor %}
         <input type="submit" value="Vote">
     </form>
-
+</div>
 {#    简要说明：#}
 {#    上面的模板在 Question 的每个 Choice 前添加一个单选按钮。 每个单选按钮的 value 属性是对应的各个 Choice 的 ID。#}
 {#    每个单选按钮的 name 是 "choice" 。这意味着，当有人选择一个单选按钮并提交表单提交时，#}
