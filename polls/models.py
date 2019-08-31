@@ -16,7 +16,8 @@ class Question(models.Model):
 
     # 这是个演示方法，调用这个方法为了判断某个问题是不是最近的时间发表的
     def was_published_recently(self):
-        return self.pub_date >= timezone.now()-datetime.timedelta(days=1)
+        now = timezone.now()
+        return now - datetime.timedelta(days=1) <= self.pub_date <= now
 
 
 class Choice(models.Model):

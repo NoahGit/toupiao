@@ -9,6 +9,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.backends import ModelBackend
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
+from django.utils import timezone
 
 
 class IndexView(generic.ListView):
@@ -16,7 +17,7 @@ class IndexView(generic.ListView):
     context_object_name = 'latest_question_list'
 
     def get_queryset(self):
-        return Question.objects.order_by('-pub_date')[:6]
+        return Question.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')[:6]
 
 
 class DetailView(generic.DetailView):
