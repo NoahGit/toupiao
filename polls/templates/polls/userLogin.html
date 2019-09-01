@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>userLogin</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
 </head>
 <body>
-  <form action="{% url 'polls:user_login' %}" method="post">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <form action="{% url 'polls:user_login' %}" method="post" style="text-align: center">
       {% csrf_token %}
-      <div>
+      <div style="color: #FFFFFF;">
             昵称：<input type="text" name="username" placeholder="请输入昵称"/>
         </div>
-        <div>
+        <div style="color: #FFFFFF;">
             密码：<input type="password" name="password" placeholder="请输入密码"/>
         </div>
         <div>
             <input type="submit" value="登录"/>
         </div>
-{#  </form>#}
+  </form>
 </body>
 </html>

@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
 </head>
 <body>
-欢迎----{{ username }}-----请点击进入<a href="http://222.25.2.37:8000/polls" style="color: #FF2D2D;">投票首页</a>
+<div style="color: #FFFFFF">
+    欢迎----{{ username }}-----请点击进入<a href="http://222.25.2.37:8000/polls" style="color: #FF2D2D;">投票首页</a>
+</div>
 </body>
 </html>

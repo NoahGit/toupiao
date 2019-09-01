@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>results</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
 </head>
 <body>
-<div align="center">
+<div align="center" style="color: #FFFFFF">
     <h1>{{ question.question_text }}</h1>
     <ul style="text-align: center;list-style: none;">
         {% for choice in question.choice_set.all %}
             <li>{{ choice.choice_text }}--{{ choice.votes }}vote{{ choice.votes|pluralize }}</li>
         {% endfor %}
     </ul>
-    <a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+    <a 后缀，缺省href="{% url 'polls:detail' question.id %}">Vote again?</a>
     <br><br><br><br><br>
     <a href="http://222.25.2.37:8000/polls" style="color: #FF2D2D;">回到投票首页</a>
 </div>
 </body>
 </html>
-{#{{ choice.votes|pluralize }}意义：如果choice.votes不是1，则返回一个复数后缀，缺省的后缀是’s’#}
+{#{#{{ choice.votes|pluralize }}意义：如果choice.votes不是1，则返回一个复数的后缀是’s’#}

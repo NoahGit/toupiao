@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>detail</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
 </head>
 <body>
-<div align="center">
+<div align="center" style="color: #FFFFFF">
     <h1>{{ question.question_text }}</h1>
 
     {% if error_message %}
