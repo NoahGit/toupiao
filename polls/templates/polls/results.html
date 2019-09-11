@@ -14,7 +14,7 @@
             <li>{{ choice.choice_text }}--{{ choice.votes }}vote{{ choice.votes|pluralize }}</li>
         {% endfor %}
     </ul>
-    <a 后缀，缺省href="{% url 'polls:detail' question.id %}">Vote again?</a>
+    <a href="{% url 'polls:detail' question.id %}">Vote again?</a>
     <br><br><br><br><br>
     <a href="http://222.25.2.37:8000/polls" style="color: #FF2D2D;">回到投票首页</a>
 </div>
